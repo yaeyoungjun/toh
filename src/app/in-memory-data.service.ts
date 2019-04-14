@@ -30,12 +30,12 @@ export class InMemoryDataService implements InMemoryDbService {
     return {heroes, superpowers};
   }
 
-  // Overrides the genId method to ensure that a hero always has an id.
-  // If the heroes array is empty,
+  // Overrides the genId method to ensure that a hero/superpower always has an id.
+  // If the heroes/superpowers array is empty,
   // the method below returns the initial number (11).
-  // if the heroes array is not empty, the method below returns the highest
-  // hero id + 1.
-  genId(heroes: Hero[]): number {
-    return heroes.length > 0 ? Math.max(...heroes.map(hero => hero.id)) + 1 : 11;
+  // if the heroes/superpowers array is not empty, the method below returns the highest
+  // hero/superpower id + 1.
+  genId<T extends Hero | Superpower>(myTable: T[]): number {
+    return myTable.length > 0 ? Math.max(...myTable.map(t => t.id)) + 1 : 11;
   }
 }
