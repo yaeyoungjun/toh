@@ -1,3 +1,21 @@
-<p>
-  superpowers works!
-</p>
+<h2>My Superpowers</h2>
+
+<div>
+  <label>Superpower name:
+    <input #superpowerName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(superpowerName.value); superpowerName.value=''">
+    add
+  </button>
+</div>
+
+<ul class="heroes">
+  <li *ngFor="let superpower of superpowers">
+    <a routerLink="/powerdetail/{{superpower.id}}">
+      <span class="badge">{{superpower.id}}</span> {{superpower.name}}
+    </a>
+    <button class="delete" title="delete superpower"
+      (click)="delete(superpower)">x</button>
+  </li>
+</ul>
