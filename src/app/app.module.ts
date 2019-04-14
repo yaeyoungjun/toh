@@ -15,6 +15,7 @@ import { HeroesComponent }      from './heroes/heroes.component';
 import { HeroSearchComponent }  from './hero-search/hero-search.component';
 import { MessagesComponent }    from './messages/messages.component';
 import { SuperpowersComponent } from './superpowers/superpowers.component';
+import { SuperpowerDetailComponent } from './superpower-detail/superpower-detail.component';
 
 @NgModule({
   imports: [
@@ -37,7 +38,8 @@ import { SuperpowersComponent } from './superpowers/superpowers.component';
     HeroDetailComponent,
     MessagesComponent,
     HeroSearchComponent,
-    SuperpowersComponent
+    SuperpowersComponent,
+    SuperpowerDetailComponent
   ],
   bootstrap: [ AppComponent ]
 })

@@ -5,11 +5,13 @@ import { DashboardComponent }   from './dashboard/dashboard.component';
 import { HeroesComponent }      from './heroes/heroes.component';
 import { SuperpowersComponent }      from './superpowers/superpowers.component';
 import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
+import { SuperpowerDetailComponent }  from './superpower-detail/superpower-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'detail/:id', component: HeroDetailComponent },
+  { path: 'powerdetail/:id', component: SuperpowerDetailComponent },
   { path: 'heroes', component: HeroesComponent },
   { path: 'superpowers', component: SuperpowersComponent }
 ];

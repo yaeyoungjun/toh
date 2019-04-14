@@ -1,0 +1,11 @@
+<div *ngIf="superpower">
+  <h2>{{superpower.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{superpower.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="superpower.name" placeholder="name"/>
+    </label>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+</div>
