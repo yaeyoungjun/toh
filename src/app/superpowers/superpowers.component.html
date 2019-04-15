@@ -12,8 +12,8 @@
 
 <ul class="heroes">
   <li *ngFor="let superpower of superpowers">
-    <a routerLink="/powerdetail/{{superpower.id}}">
+    <div>
       <span class="badge">{{superpower.id}}</span> {{superpower.name}}
-    </a>
+    </div>
   </li>
 </ul>
