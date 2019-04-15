@@ -6,10 +6,7 @@ import { SuperpowerService } from '../superpower.service';
 @Component({
   selector: 'app-superpowers',
   templateUrl: './superpowers.component.html',
-  styleUrls: [
-    '../heroes/heroes.component.css',
-    './superpowers.component.css'
-  ]
+  styleUrls: ['./superpowers.component.css']
 })
 export class SuperpowersComponent implements OnInit {
   superpowers: Superpower[];
