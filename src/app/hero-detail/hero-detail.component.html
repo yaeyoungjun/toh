@@ -6,6 +6,23 @@
       <input [(ngModel)]="hero.name" placeholder="name"/>
     </label>
   </div>
+  <div>
+    <span>Superpowers</span>
+    <ul class="heroes">
+      <li *ngFor="let superpower of hero.superpowers">
+        <div>
+          <span class="badge">{{superpower.id}}</span> {{superpower.name}}
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <label for="add-superpower">Give this hero a superpower</label>
+    <select id="add-superpower" [(ngModel)]="heroSuperpower">
+      <option value=""></option>
+      <option *ngFor="let superpower of superpowers" [value]="superpower.id">{{superpower.name}}</option>
+    </select>
+  </div>
   <button (click)="goBack()">go back</button>
   <button (click)="save()">save</button>
 </div>
