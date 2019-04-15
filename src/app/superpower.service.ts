@@ -63,25 +63,6 @@ export class SuperpowerService {
     );
   }
 
-  /** DELETE: delete the superpower from the server */
-  deleteSuperpower (superpower: Superpower | number): Observable<Superpower> {
-    const id = typeof superpower === 'number' ? superpower : superpower.id;
-    const url = `${this.superpowersUrl}/${id}`;
-
-    return this.http.delete<Superpower>(url, httpOptions).pipe(
-      tap(_ => this.log(`deleted superpower id=${id}`)),
-      catchError(this.handleError<Superpower>('deleteSuperpower'))
-    );
-  }
-
-  /** PUT: update the superpower on the server */
-  updateSuperpower (superpower: Superpower): Observable<any> {
-    return this.http.put(this.superpowersUrl, superpower, httpOptions).pipe(
-      tap(_ => this.log(`updated superpower id=${superpower.id}`)),
-      catchError(this.handleError<any>('updateSuperpower'))
-    );
-  }
-
   /**
    * Handle Http operation that failed.
    * Let the app continue.

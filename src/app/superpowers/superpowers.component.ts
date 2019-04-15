@@ -34,9 +34,4 @@ export class SuperpowersComponent implements OnInit {
       });
   }
 
-  delete(superpower: Superpower): void {
-    this.superpowers = this.superpowers.filter(h => h !== superpower);
-    this.superpowerService.deleteSuperpower(superpower).subscribe();
-  }
-
 }
