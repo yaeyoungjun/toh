@@ -49,9 +49,6 @@ export class HeroDetailComponent implements OnInit {
 
  save(): void {
     if (this.heroSuperpower) {
-       if (!this.hero.superpowers) {
-         this.hero.superpowers = [];
-       }
       const selectedPower = this.superpowers.find(power => power.id == this.heroSuperpower)
       this.hero.superpowers.push(selectedPower);
     }
